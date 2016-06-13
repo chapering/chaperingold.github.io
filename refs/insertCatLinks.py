@@ -59,8 +59,6 @@ def findLinkInfoFuzzy(linkinfo, tstr):
                 ret = linkinfo[art]
     return ret 
 
-usedACMarticles=set()
-
 def findLinkInfo(linkinfo, tstr):
     global usedACMarticles
     import re
@@ -82,6 +80,7 @@ if __name__ == "__main__":
 
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(string.join( file(sys.argv[2],'r').readlines(), '\n' ),'lxml')
+    usedACMarticles=set()
     for li in soup.ol.find_all('li'):
         ps = li.find_all('p')
         bs = li.find_all('b') 
@@ -107,7 +106,6 @@ if __name__ == "__main__":
     sys.exit(0)
 
     print "never used acm articles"
-    global usedACMarticles
     for a in set(linkinfo.keys()) - usedACMarticles:
         print a
 

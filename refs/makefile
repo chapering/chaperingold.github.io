@@ -7,6 +7,3 @@ references:	publications.html
 publications.html:	refs.bib abbreviations
 	./refs2html
 	./updateACMLinks.sh
-
-clean:
-	rm -f sec.php OO.php fdns.php optOO.php ccanal.php perf.php incr.php paradfa.php expl.php refs-by-date.php
