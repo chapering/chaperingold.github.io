@@ -1,0 +1,13 @@
+<?php
+require('../display_util.php');
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$navi=new Navigator('Publications');
+$navi->mkCommonNavigator();
+$page=new ThreeParts();
+$left = '' ;
+$content=<<<END_CONTENT
+
+<BODY bgcolor=#ffffff link=#c04040>
+<HR>This web page contains links to postscript versions of papers that may be covered by copyright (e.g., <A HREF=http://www.acm.org/pubs/copyrights.html>ACM Copyright</A>).<HR>
+<OL>
+

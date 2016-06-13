@@ -1,0 +1,47 @@
+#!/bin/sh
+
+cat >.abbrevs <<end-of-cat
+#!/bin/sh
+
+awk '
+  BEGIN {
+end-of-cat
+
+awk '
+  {
+    if(NF>=2) {
+      c=""
+      for(n=2;n<=NF;n++)
+	c=c $(n) " "
+      gsub("'\''","'\''\\'\'\''",c)
+      printf "    abbrevs[\"%s\"]=\"%s\"\n", $1, substr(c,1,length(c)-1)
+    }
+  }
+' abbreviations >>.abbrevs
+
+cat >>.abbrevs <<end-of-cat
+    FS="|"
+  }
+
+  {
+    for(n=1;n<NF;n++) {
+      if( split(\$(n),a," ")==1 && abbrevs[\$(n)] ) {
+          printf "%s|", abbrevs[\$(n)]
+      }
+      else {
+          printf "%s|", \$(n)
+      }
+    }
+    if( split(\$(NF),a," ")==1 && abbrevs[\$(NF)] ) {
+	printf "%s\n", abbrevs[\$(NF)]
+    }
+    else {
+	printf "%s\n", \$(NF)
+    }
+  }
+' $1
+end-of-cat
+
+chmod ug+x .abbrevs
+./.abbrevs $1
+rm .abbrevs

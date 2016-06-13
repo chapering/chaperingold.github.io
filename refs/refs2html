@@ -1,0 +1,94 @@
+#!/bin/sh
+
+export PATH=$PATH:`dirname $0`
+
+echo HTML reference files generation:
+echo "Using '${1-refs.bib}' as refs source and 'abbreviations' as abbrevs source."
+echo
+
+#rm  *.php
+umask 003
+one-line ${1-refs.bib} >.refs.$$
+
+
+phpheader2="<?php
+require('display_util.php');
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\$navi=new Navigator('Publications');
+\$navi->mkCommonNavigator();
+\$page=new ThreeParts();
+\$left = '' ;
+\$content=<<<END_CONTENT
+"
+
+phpheader="<?php
+require('../display_util.php');
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\$navi=new Navigator('Publications');
+\$navi->mkCommonNavigator();
+\$page=new ThreeParts();
+\$left = '' ;
+\$content=<<<END_CONTENT
+"
+
+
+phptrailer="
+END_CONTENT;
+
+\$page->mkTop(\$navi);
+\$page->mkLeft(\$left);
+\$page->mkContent(\$content);
+
+\$home=new HTMLPage();
+\$home->mkProlangsDocument(\"PROLANGS Publications\",array(),\$page->getHTML());
+
+?>
+"
+
+
+
+
+echo "Generating '../publications.php' index file"
+# Make the HTML index file
+echo "$phpheader2" >../publications.php
+cat >>../publications.php <<end-of-cat
+<h2>Publications</h2>
+<ul>
+  <LI> <A HREF="refs/refs-by-date.php"> All publications by date </A> <P>
+  <LI> Publications by topic, then date <P>
+  <ul>
+end-of-cat
+
+for n in `topics .refs.$$`
+do
+  echo '    <LI> <A HREF="'refs/${n}.php'"> '`echo $n | abbrevs`' </A>' >>../publications.php
+done
+
+cat >>../publications.php <<end-of-cat
+    </ul>
+  </ul>
+end-of-cat
+echo "$phptrailer" >> ../publications.php
+
+
+chmod o+r ../publications.php
+
+
+echo "Generating 'refs-by-date.php' refs by date file"
+# Make the refs-by-date file
+echo "$phpheader" >refs-by-date.php
+abbrevs .refs.$$ | line2html date >>refs-by-date.php
+echo "$phptrailer" >>refs-by-date.php
+chmod o+r refs-by-date.php
+
+# Make the refs by topic files
+for n in `topics .refs.$$`
+do
+  echo "Generating '${n}.php' refs by topic file"
+  echo "$phpheader" >${n}.php
+  cut-topic $n .refs.$$ | abbrevs | line2html topic >>${n}.php
+  echo "$phptrailer" >>${n}.php
+  chmod o+r ${n}.php
+done
+
+rm .refs.$$

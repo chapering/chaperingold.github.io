@@ -1,0 +1,16 @@
+
+
+</OL>
+</BODY>
+
+END_CONTENT;
+
+$page->mkTop($navi);
+$page->mkLeft($left);
+$page->mkContent($content);
+
+$home=new HTMLPage();
+$home->mkProlangsDocument("PROLANGS Publications",array(),$page->getHTML());
+
+?>
+

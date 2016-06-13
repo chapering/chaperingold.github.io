@@ -1,0 +1,14 @@
+#!/bin/sh
+
+awk '
+  BEGIN {
+    FS="|"
+  }
+
+  {
+    if( !topics[$1] ) {
+      print $1
+      topics[$1]++
+    }
+  }
+' $1

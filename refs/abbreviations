@@ -1,0 +1,100 @@
+incr		Incremental Data Flow Analysis
+perf		Performance Estimation
+ccanal		Analysis of C
+OO              Analysis of Object-Oriented Languages
+optOO		Software Tools and Optimizations for Object-Oriented Languages
+paradfa		Parallel Data Flow Analysis
+fdns		Foundations of Data Flow Analysis
+expl		Analysis of Explicitly Parallel Programs
+sec		Security
+
+ryder		B. G. Ryder
+
+rutgers		Department of Computer Science, Rutgers University
+ru		Rutgers University
+ruphd		Rutgers University, Ph.D. Thesis
+rums		Rutgers University, M. S. Thesis
+
+lcstr		Laboratory of Computer Science Research Technical Report
+dcstr		Department of Computer Science Technical Report
+caiptr		Center for Computer Aids for Industrial Productivity Technical Report
+
+oopsla04	Proceedings of the 19th annual ACM SIGPLAN Conference on Object-oriented programming, systems, languages, and applications(OOPSLA 2004)
+issta02		Proceedings of the 2002 ACM SIGSOFT international symposium on Software testing and analysis(ISSTA 2002)
+issta04		Proceedings of the 2004 ACM SIGSOFT international symposium on Software testing and analysis(ISSTA 2004)
+icsm05		Proceedings of the 21st International Conference on Software Maintenance(ICSM 2005)
+issta07		Proceedings of the 2007 ACM SIGSOFT international symposium on Software testing and analysis(ISSTA 2007)
+issta13		Proceedings of the 2013 ACM SIGSOFT international symposium on Software testing and analysis(ISSTA 2013)
+
+acta		Acta Informatica
+jsme            Journal of Software Maintenance and Evolution: Research and Practice
+toplas		ACM Transactions on Programming Languages and Systems
+tpds		IEEE Transaction on Parallel and Distributed Systems
+tse		IEEE Transactions on Software Engineering
+tosem		ACM Transactions on Software Engineering Methodology
+loplas		ACM Letters on Programming Languages and Systems
+spe		Software Practice and Experience
+cj		Computer Journal
+algo		Algorithmica
+siadm		SIAM Journal of Algebraic and Discrete Methods
+siamc		SIAM Journal of Computing
+cog		Cognition
+cacm		Communications of the ACM
+jacm		Journal of the ACM
+fse96		Proceedings of the 4th Symposium on the Foundations of Software Engineering
+fse99		Proceedings of the 7th Symposium on the Foundations of Software Engineering
+fse06		Proceedings of the 14th SIGSOFT Conference on the Foundations of Software Engineering
+fse08		Proceedings of the 16th SIGSOFT Conference on the Foundations of Software Engineering
+sigmod86	Proceedings of the ACM SIGMOD '86 International Conference on Management of Data
+stoc7		Conference Record of the Seventh Annual ACM Symposium on the Theory of Computing
+focs17		Proceedings of Seventeenth Annual IEEE Symposium on the Foundations of Computer Science
+hicss20		Proceedings of the Twentieth Hawaii International Conference on System Sciences, Volume II, Software
+hicss24		Proceedings of the Twentyfourth Hawaii International Conference on System Sciences, Volume II, Software
+sigplan		Proceedings of the ACM SIGPLAN Symposium on Compiler Construction
+sigplan86	Proceedings of the SIGPLAN '86 Conference on Programming Language Design and Implementation
+sigplan88	Proceedings of the SIGPLAN '88 Conference on Programming Language Design and Implementation
+sigplan89	Proceedings of the SIGPLAN '89 Conference on Programming Language Design and Implementation
+sigplan90	Proceedings of the SIGPLAN '90 Conference on Programming Language Design and Implementation
+sigplan91	Proceedings of the SIGPLAN '91 Conference on Programming Language Design and Implementation
+sigplan92	Proceedings of the SIGPLAN '92 Conference on Programming Language Design and Implementation
+sigplan93	Proceedings of the SIGPLAN '93 Conference on Programming Language Design and Implementation
+sigplan94	Proceedings of the SIGPLAN '94 Conference on Programming Language Design and Implementation
+sigplan95	Proceedings of the SIGPLAN '95 Conference on Programming Language Design and Implementation
+psde		Proceedings of the ACM SIGSOFT/SIGPLAN Software Engineering Symposium on Practical Software Development Environments
+sde90		Proceedings of the Fourth ACM SIGSOFT Symposium on Software Development Environments
+popl1		Conference Record of the ACM Symposium on Principles of Programming Languages
+popl2		Conference Record of the Second Annual ACM Symposium on Principles of Programming Languages
+popl3		Conference Record of the Third Annual ACM Symposium on Principles of Programming Languages
+popl4		Conference Record of the Fourth Annual ACM Symposium on Principles of Programming Languages
+popl5		Conference Record of the Fifth Annual ACM Symposium on Principles of Programming Languages
+popl6		Conference Record of the Sixth Annual ACM Symposium on Principles of Programming Languages
+popl7		Conference Record of the Seventh Annual ACM Symposium on Principles of Programming Languages
+popl8		Conference Record of the Eighth Annual ACM Symposium on Principles of Programming Languages
+popl9		Conference Record of the Ninth Annual ACM Symposium on Principles of Programming Languages
+popl10		Conference Record of the Tenth Annual ACM Symposium on Principles of Programming Languages
+popl11		Conference Record of the Eleventh Annual ACM Symposium on Principles of Programming Languages
+popl12		Conference Record of the Twelfth Annual ACM Symposium on Principles of Programming Languages
+popl13		Conference Record of the Thirteenth Annual ACM Symposium on Principles of Programming Languages
+popl14		Conference Record of the Fourteenth Annual ACM Symposium on Principles of Programming Languages
+popl15		Conference Record of the Fifteenth Annual ACM Symposium on Principles of Programming Languages
+popl16		Conference Record of the Sixteenth Annual ACM Symposium on Principles of Programming Languages
+popl17		Conference Record of the Seventeenth Annual ACM Symposium on Principles of Programming Languages
+popl18		Conference Record of the Eighteenth Annual ACM Symposium on Principles of Programming Languages
+popl92		Conference Record of the Nineteenth Annual ACM Symposium on Principles of Programming Languages
+popl93		Conference Record of the Twentieth Annual ACM Symposium on Principles of Programming Languages
+popl94		Conference Record of the Twenty-first Annual ACM Symposium on Principles of Programming Languages
+popl95		Conference Record of the Twenty-second Annual ACM Symposium on Principles of Programming Languages
+scam06		Proceedings of the 6th International Workshop on Source Code Analysis and Manipulation
+
+jan		January
+feb		February
+mar		March
+apr		April
+may		May
+jun		June
+jul		July
+aug		August
+sep		September
+oct		October
+nov		November
+dec		December

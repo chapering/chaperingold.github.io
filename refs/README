@@ -1,0 +1,46 @@
+		THE BIB TO HTML GENERATION SYSTEM
+		---------------------------------
+
+							August 9, 1995
+
+  This directory contains all the HTML files used by the PROLANGS Home
+Page along with the shell scripts that are required to regenerate the
+HTML files from the references and abbreviations files. The two
+"source" files used are:
+
+  refs.bib: The references file in "extended" bib format. This format
+includes the additional field names 'topic', 'seealso', 'note' and
+'url'. 'topic' classifies the references according to different
+topics. 'seealso' and 'note' allow placing comments along with the
+reference. 'url' provides the source URL for a given reference if the
+reference is available on-line.
+
+  abbreviations: The abbreviations file. This file contains all
+one-word abbreviations used in the refs.bib file. All abbreviations
+are substituted by their expansion before the HTML files are
+generated. The format of the file is simple: every line contains an
+abbreviation, which is the one-word abbreviation followed by its
+expansion. Any white space may separate one from the other.
+
+  acmlinks.txt: The authorization code obtained from ACM author page. Through the links 
+in this file, papers published by ACM may be authorized to share with the public for free. 
+Two python scripts, insertLinks.py and insertCatLinks.py, are written for inserting the per-paper 
+authorization code to the generated PHP pages. The first script serves refs-by-date.php and the 
+second serves the PHP pages for different categories of topic. The addition of this feature does not 
+affect the original procedure for updating the publication page except for that, if new ACM papers 
+appeared on ACM digital library that can be authorized for public access, a new version of acmlinks.txt 
+needs to be downloaded before updating refs.bib and executing 'make'.
+
+  The regeneration of the HTML files --if required-- is driven with
+the makefile (by executing make with no arguments) included in the
+directory. A change in any of the two source files triggers the
+regeneration.
+
+  New topics can be added without modifying the system. Only an entry
+in the abbreviations file is required, that expands the topic name to
+its full expanded name.
+
+  WARNING: All fields in the references file have to be a single
+line. It is better not to use the bib mode in emacs, that has a
+tendency to make things more than one line as soon are they are too
+long.

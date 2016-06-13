@@ -1,0 +1,76 @@
+#!/bin/sh
+
+awk '
+  function lower(s) {
+    x=s
+
+    gsub("A","a",x)
+    gsub("B","b",x)
+    gsub("C","c",x)
+    gsub("D","d",x)
+    gsub("E","e",x)
+    gsub("F","f",x)
+    gsub("G","g",x)
+    gsub("H","h",x)
+    gsub("I","i",x)
+    gsub("J","j",x)
+    gsub("K","k",x)
+    gsub("L","l",x)
+    gsub("M","m",x)
+    gsub("N","n",x)
+    gsub("O","o",x)
+    gsub("P","p",x)
+    gsub("Q","q",x)
+    gsub("R","r",x)
+    gsub("S","s",x)
+    gsub("T","t",x)
+    gsub("U","u",x)
+    gsub("V","v",x)
+    gsub("W","w",x)
+    gsub("X","x",x)
+    gsub("Y","y",x)
+    gsub("Z","z",x)
+
+    return x
+  }
+
+  BEGIN {
+     nfnames=split("topic:year:month:author:title:institution:school:booktitle:journal:volume:number:pages:url:seealso:note:doi",fnames,":")
+    record=0
+  }
+
+  (record==0) && ($1 ~ /@[a-zA-Z]+/) {
+    record=1
+  }
+
+  (record==1) && ($0 ~ /[a-zA-Z]+[ \t]*=/) {
+    split($0,s,"=")
+    gsub(/^[ \t]*/,"",s[1])
+    gsub(/^[ \t]*/,"",s[2])
+    gsub(/[ \t]*$/,"",s[1])
+    gsub(/[ \t]*$/,"",s[2])
+    if( substr(s[2],1,1) == "\"" ) {
+      split($0,a,"\"")
+      rec[lower(s[1])]=a[2]
+    }
+    else {
+      split(s[2],a,",")
+      rec[lower(s[1])]=a[1]
+    }
+  }
+
+  (record==1) && (substr($(NF),length($(NF)),1) == ")") {
+    record=2
+  }
+
+  record==2 {
+    for(n=1;n<=nfnames;n++) {
+      printf "%s|", rec[fnames[n]]
+      rec[fnames[n]]=""
+    }
+    printf "\n"
+
+    record=0
+  }
+
+' $1 | sort -f "-t|" +1 -2nr -r +2 -3Mr

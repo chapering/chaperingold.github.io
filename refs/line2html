@@ -1,0 +1,53 @@
+#!/bin/sh
+
+awk '
+  BEGIN {
+    FS="|"
+
+    printf "<BODY bgcolor=#ffffff link=#c04040>\n"
+    printf "<HR>This web page contains links to postscript versions of papers that may be covered by copyright (e.g., <A HREF=http://www.acm.org/pubs/copyrights.html>ACM Copyright</A>).<HR>\n"
+    printf "<OL>\n"
+  }
+
+  END {
+    printf "</OL>\n"
+    printf "</BODY>\n"
+  }
+
+  {
+    printf "  <LI>\n"
+
+    if("'$1'"=="date")
+      printf "  <B> %s </B> <P>\n", $1
+
+    printf "  %s,\n", $4
+    printf "  \"%s\",\n", $5
+    if($6)
+      printf "  <I> %s, </I>\n", $6
+    if($7)
+      printf "  <I> %s, </I>\n", $7
+    if($8)
+      printf "  <I> %s, </I>\n", $8
+    if($9)
+      printf "  <I> %s, </I>\n", $9
+    if($10)
+      printf "  Volume %s,\n", $10
+    if($11)
+      printf "  Number %s,\n", $11
+    if($12)
+      printf "  Pages %s,\n", $12
+    if($3)
+      printf "  %s,\n", $3
+    printf "  %s. <P>\n", $2
+    if($13) 
+      printf "   <a href=\"%s\">Local</a> <p> \n", $13
+    if($16) 
+      printf "   <a href=\"http://dx.doi.org/%s\">Digital Library</a> <p> \n", $16
+    if($14)
+      printf "  <B> See also: </B> %s. <P>\n", $14
+    if($15)
+      printf "  <B> Note: </B> %s. <P>\n", $15
+
+    printf "\n"
+  }
+' $2
