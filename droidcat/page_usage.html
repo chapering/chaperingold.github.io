@@ -61,16 +61,16 @@ How to use droidcat on a set of unknown apps with the current classification mod
 <h1><a class="anchor" id="droidcat_retraining"></a>
 How to use droidcat with an updated classification model</h1>
 <p>To accommodate new malware families and new types of benign apps, the classification model of DroidCat will need to be retrained using a new set of training samples.</p>
-<h2><a class="anchor" id="sec1"></a>
-1. run static analysis (including the instrumentation) of each app</h2>
+<h2><a class="anchor" id="ssec1"></a>
+1. obtain the new training data set</h2>
 <p>Compute the features of each training sample by following the first three steps in Section <a class="el" href="page_usage.html#droidcat_usage">How to use droidcat on a set of unknown apps with the current classification model</a>. Then merge all their features into the three feature files and move these three files in ML/features.</p>
-<h2><a class="anchor" id="sec2"></a>
-2. run the instrumented app and generate call traces</h2>
+<h2><a class="anchor" id="ssec2"></a>
+2. use DoridCat on the new training data set</h2>
 <p>Just use DroidCat as shown in the fourth step of Section <a class="el" href="page_usage.html#droidcat_usage">How to use droidcat on a set of unknown apps with the current classification model</a>, the new classification model will be trained automatically on the new training data set. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 5 2017 22:30:43 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 6 2017 11:52:52 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
