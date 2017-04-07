@@ -1,0 +1,1 @@
+C:\"Program Files (x86)"\Bibtex2html\bibtex2html.exe -heveaurl -noheader -nokeys -style "ieeetr" -html-entities  -dl   -nofooter  -t "Publications" hcaipub.bib
