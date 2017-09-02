@@ -3,7 +3,7 @@
 # For domain: http://www.nd.edu/~hcai
 ###
 
-User-agent: *
-Disallow: /sensa/casestudies
-Disallow: /sensa
+#User-agent: *
+#Disallow: /sensa/casestudies
+#Disallow: /sensa
 
