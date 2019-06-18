@@ -1,9 +1,18 @@
+@inproceedings{xqfu19fsetool,
+  author = 	 {Xiaoqin Fu and Haipeng Cai},
+  title = 	 {A Dynamic Taint Analyzer for Distributed Systems},
+  year = 	 {2019},
+  booktitle = {ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE), Tool track},
+  note = {\url{https://bitbucket.org/xiaoqinfu/disttaint}{project}}
+}
 
 @inproceedings{mostafa19lctes,
   author = 	 {Mostafa Mohammed and Haipeng Cai and Na Meng},
   title = 	 {{WIP}: An Empirical Comparison between {Monkey} Testing and Human Testing},
   year = 	 {2019},
-  booktitle = {ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)}
+  booktitle = {ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)},
+  pages = {188--192},
+  note = {[\url{pubs/lctes19.pdf}{pdf}]}
 }
 
 @inproceedings{cai19issta,
@@ -11,7 +20,7 @@
   title = 	 {A Large-Scale Study of Application Incompatibilities in {Android}},
   year = 	 {2019},
   booktitle = {ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
-  note = {[\url{pubs/issta19.pdf}{pdf}}
+  note = {[\url{pubs/issta19.pdf}{pdf}, \url{https://bitbucket.org/wsucailab/compat-tools/}{project}, \url{https://eecs.wsu.edu/~hcai/appCompatAE/}{artifact evaluated}]}
 }
 
 @inproceedings{xqfu19icpc,
@@ -19,6 +28,7 @@
   title = 	 {Measuring Interprocess Communications in Distributed Systems},
   year = 	 {2019},
   booktitle = {IEEE/ACM International Conference on Program Comprehension (ICPC)},
+  pages = {323--334},
   note = {[\url{pubs/icpc19.pdf}{pdf}}
 }
 
@@ -27,7 +37,7 @@
   title = 	 {A Look Into Developer Intentions for App Compatibility in {Android}},
   year = 	 {2019},
   booktitle = {IEEE/ACM International Conference on Mobile Software Engineering and Systems (MobileSoft)},
-  note = {[\url{pubs/mobilesoft19.pdf}{pdf}}
+  note = {[\url{pubs/mobilesoft19.pdf}{pdf}, \url{https://bitbucket.org/wsucailab/compat-tools/}{project}]}
 }
 
 @inproceedings{xqfu19icseposter,
@@ -35,7 +45,8 @@
   title = 	 {On the Deterioration of Learning-Based Malware Detectors for {Android}},
   year = 	 {2019},
   booktitle = {IEEE/ACM International Conference on Software Engineering (ICSE), Poster track},
-  note = {[\url{pubs/icse19-poster.pdf}{pdf}}
+  pages = {272--273},
+  note = {[\url{pubs/icse19-poster.pdf}{pdf}, \url{https://bitbucket.org/haipeng_cai/droidspan}{project}]}
 }
 
 @inproceedings{xqfu19icserose,
@@ -43,7 +54,7 @@
   title = 	 {A Partial Reproduction of Malware Detection with {RevealDroid}},
   year = 	 {2019},
   booktitle = {IEEE/ACM International Conference on Software Engineering (ICSE), ROSE Festival track},
-  note = {[\url{pubs/icse19-rose.pdf}{pdf}}
+  note = {[\url{pubs/icse19-rose.pdf}{pdf}, \url{https://bitbucket.org/haipeng_cai/droidspan}{project}]}
 }
 
 @article{tmc18interapp,
@@ -57,23 +68,29 @@
 @article{tifs18droidcat,
   author = 	 {Haipeng Cai and Na Meng and Barbara Ryder and Danfeng (Daphne) Yao},
   title = 	 {DroidCat: Effective {Android} Malware Detection and Categorization via App-Level Profiling},
-  year = 	 {2018},
+  year = 	 {2019},
   journal = {IEEE Transactions on Information Forensics and Security (TIFS)},
+  volume = {14},
+  number = {6},
+  pages = {1455--1470},
   note = {[\url{pubs/tifs18.pdf}{pdf}, \url{https://vtechworks.lib.vt.edu/handle/10919/77523}{technical report}, \url{droidcat}{project}]}
 }
 
 @article{ist18conpos,
   author = 	 {Nasir Ali and Haipeng Cai and Abdelwahab Hamou-Lhadj and Jameleddine Hassine},
   title = 	 {Exploiting Parts-of-Speech for Effective Automated Requirements Traceability},
-  year = 	 {2018},
+  year = 	 {2019},
+  volume = {106},
+  pages = {126--141}, 
   journal =  {Information and Software Technology}
 }
 
 
 @inproceedings{msr18evotaint,
-  author = 	 {John Jinkens and Haipeng Cai},
+  author = 	 {Haipeng Cai and John Jinkens},
   title = 	 {Leveraging Historical Versions of {Android} Apps for Efficient and Precise Taint Analysis},
   year = 	 {2018},
+  pages = 	{265--269},
   booktitle = {IEEE/ACM Working Conference on Mining Software Repository (MSR)},
   note = {[\url{https://dl.acm.org/authorize?N661846}{pdf}, \url{https://bitbucket.org/sabatu/iterative-taint-analysis}{project}]}
 }
@@ -82,6 +99,7 @@
   author = 	 {John Jinkens and Haipeng Cai},
   title = 	 {{ICC-Inspect}: Supporting Runtime Inspection of {Android} Inter-Component Communications},
   year = 	 {2018},
+  pages = {80--83},
   booktitle = {IEEE/ACM International Conference on Mobile Software Engineering and Systems (MobileSoft), Tool track},
   note = {[\url{https://dl.acm.org/authorize?N661849}{pdf}, \url{https://bitbucket.org/sabatu/icc-visualizer-with-graphstream}{project}]}
 }
@@ -90,6 +108,7 @@
   author = 	 {Malinda Dilhara and Haipeng Cai and John Jinkens},
   title = 	 {Automated Detection and Repair of Incompatible Uses of Runtime Permissions in {Android} Apps},
   year = 	 {2018},
+  pages = {67--71},
   booktitle = {IEEE/ACM International Conference on Mobile Software Engineering and Systems (MobileSoft)},
   note = {[\url{https://dl.acm.org/authorize?N661847}{pdf}, \url{https://bitbucket.org/malindadoo/arpdroid}{project}]}
 }
@@ -99,7 +118,8 @@
   title =    {Towards Sustainable {Android} Malware Detection},
   booktitle = {IEEE/ACM International Conference on Software Engineering (ICSE), Poster track},
   year = {2018},
-  note = {[\url{https://dl.acm.org/authorize?N661848}{pdf}}
+  pages = {350--351},
+  note = {[\url{https://dl.acm.org/authorize?N661848}{pdf}, \url{https://bitbucket.org/haipeng_cai/droidspan}{project}]}
 }
 
 @inproceedings{john17iccvis-nier,
@@ -138,8 +158,11 @@
 @article{cai15diverjournal,
   author = 	 {Haipeng Cai},
   title = 	 {Hybrid Program Dependence Approximation for Effective Dynamic Impact Prediction},
-  year = 	 {2017},
+  year = 	 {2018},
   journal =  {IEEE Transactions on Software Engineering (TSE)},
+  volume = {44},
+  number = {4},
+  pages = {334--364},
   note = {[\url{pubs/tse17.pdf}{pdf}, \url{diver/}{project}]}
 }
 
@@ -203,7 +226,7 @@
   booktitle = {IEEE/ACM Conference on Automated Software Engineering (ASE)},
   year = 	 {2016},
   pages = {344--355},
-  note = {[\url{https://dl.acm.org/authorize?N11787}{pdf}, \url{http://arxiv.org/abs/1604.04638}{technical report}, \url{slides/ase16-slides.pdf}{slides}, \url{distea/}{project}, acceptance rate=19.1%]}
+  note = {[\url{https://dl.acm.org/authorize?N11787}{pdf}, \url{http://arxiv.org/abs/1604.04638}{technical report}, \url{slides/ase16-slides.pdf}{slides}, \url{distea/}{project}]}
 }
 @article{cai16diverplusjournal,
   author = 	 {Haipeng Cai and Raul Santelices and Douglas Thain},
@@ -241,7 +264,7 @@
   booktitle = {International Conference on Software Quality, Reliability, and Security (QRS)},
   year = 	 {2015},
   pages =    {49--58},
-  note = {[\url{pubs/qrs15-a.pdf}{pdf}, \url{slides/qrs15-a-slides.pdf}{slides}, \url{mdg/}{project}, acceptance rate=21.9%]}
+  note = {[\url{pubs/qrs15-a.pdf}{pdf}, \url{slides/qrs15-a-slides.pdf}{slides}, \url{mdg/}{project}]}
 }
 @inproceedings{cai15sekm,
   author = 	 {Haipeng Cai},
@@ -257,7 +280,7 @@
   booktitle = {International Conference on Software Analysis, Evolution, and Reengineering (SANER)},
   year = 	 {2015},
   pages = {231--240},
-  note = {[\url{pubs/saner15-a.pdf}{pdf}, \url{slides/saner15-a-slides.pdf}{slides}, \url{diver/}{project}, acceptance rate=27.1%]}
+  note = {[\url{pubs/saner15-a.pdf}{pdf}, \url{slides/saner15-a-slides.pdf}{slides}, \url{diver/}{project}]}
 }
 @inproceedings{cai15tracer,
   author = 	 {Haipeng Cai and Raul Santelices},
@@ -290,7 +313,7 @@
   booktitle = {International Conference on Software Security and Reliability (SERE/QRS)},
   year = 	 {2014},
   pages = {48--57},
-  note = {[\url{pubs/sere14.pdf}{pdf}, \url{slides/sere14-slides.pdf}{slides},\url{deam/}{project}, acceptance rate=30%]}
+  note = {[\url{pubs/sere14.pdf}{pdf}, \url{slides/sere14-slides.pdf}{slides},\url{deam/}{project}]}
 }
 @inproceedings{cai14diver,
   author = 	 {Haipeng Cai and Raul Santelices},
@@ -298,7 +321,7 @@
   booktitle = {IEEE/ACM Conference on Automated Software Engineering (ASE)},
   year = 	 {2014},
   pages = {343--348},
-  note = {[\url{https://dl.acm.org/authorize?N05626}{pdf}, \url{diver/}{project}, acceptance rate=24%]}
+  note = {[\url{https://dl.acm.org/authorize?N05626}{pdf}, \url{diver/}{project}]}
 }
 @inproceedings{cai14sensa,
   author = 	 {Haipeng Cai and Siyuan Jiang and Raul Santelices and Yingjie Zhang and Yiji Zhang},
@@ -306,7 +329,7 @@
   booktitle = {International Working Conference on Source Code Analysis and Manipulation (SCAM)},
   year = 	 {2014},
   pages = {165--174},
-  note = {[\url{pubs/scam14.pdf}{pdf}, \url{slides/scam14-slides.pdf}{slides}, \url{pubs/sensaTR13.pdf}{technical report}, \url{sensa/html/}{project}, acceptance rate=31.7%]}
+  note = {[\url{pubs/scam14.pdf}{pdf}, \url{slides/scam14-slides.pdf}{slides}, \url{pubs/sensaTR13.pdf}{technical report}, \url{sensa/html/}{project}]}
 }
 @inproceedings{jiang14sep,
   author = 	 {Siyuan Jiang and Raul Santelices and Mark Grechanik and Haipeng Cai},
@@ -357,7 +380,7 @@
 	title=		{Quantitative Program Slicing: Separating Statements by Relevance},
     pages=      {1269-1272},
 	year=		{2013},
-    note = {[\url{pubs/icsenier13.pdf}{pdf}, \url{sensa/html}{project}, acceptance rate=22%]}
+    note = {[\url{pubs/icsenier13.pdf}{pdf}, \url{sensa/html}{project}]}
 }
 
 @article {AD2012ESR,
@@ -423,7 +446,7 @@
 	booktitle=	{IEEE Symposium on Biological Data Visualization},
 	title=		{InBox: In-situ multiple-selection and multiple-view exploration of diffusion tensor MRI visualization},
 	year=		{2011},
-	note=		{(Oral presentation; Acceptance rate: 12\%)}
+	note=		{(Oral presentation)}
 }
 @inproceedings{APAuchus-2011-DTTACC,
 	author=	{Alexander P. Auchus and Juebin Huang and Jian Chen and Haipeng Cai and Robert P. Friedland and
