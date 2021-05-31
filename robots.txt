@@ -1,9 +1,0 @@
-###
-# robots.txt file created at http://www.yellowpipe.com
-# For domain: http://www.nd.edu/~hcai
-###
-
-#User-agent: *
-#Disallow: /sensa/casestudies
-#Disallow: /sensa
-
